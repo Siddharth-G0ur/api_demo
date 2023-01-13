@@ -2,12 +2,19 @@ import { Fragment } from "react";
 import { connect } from "react-redux";
 import { getUser } from "./actions/user";
 import PropTypes from "prop-types";
+import Card from "react-bootstrap/Card";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Cards from "./components/Cards";
+import "./App.css";
+import ProfileCard from "./components/ProfileCard";
 
 function App({ getUser }) {
   return (
-    <Fragment>
+    <div>
       <button onClick={getUser}> Click Me</button>
-    </Fragment>
+      <ProfileCard />
+      <Cards />
+    </div>
   );
 }
 
