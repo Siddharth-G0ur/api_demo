@@ -1,8 +1,18 @@
-import "./App.css";
 import { Fragment } from "react";
+import { connect } from "react-redux";
+import { getUser } from "./actions/user";
+import PropTypes from "prop-types";
 
-function App() {
-  return <Fragment>slow</Fragment>;
+function App({ getUser }) {
+  return (
+    <Fragment>
+      <button onClick={getUser}> Click Me</button>
+    </Fragment>
+  );
 }
 
-export default App;
+App.propTypes = {
+  getUser: PropTypes.func.isRequired,
+};
+
+export default connect(null, { getUser })(App);
