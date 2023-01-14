@@ -1,6 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-const ProfileCard = () => {
+const ProfileCard = ({ singleUser }) => {
+  const { email, first_name, last_name, avatar } = singleUser;
   return (
     <>
       <div class="flex-container space-between">
@@ -9,19 +12,15 @@ const ProfileCard = () => {
           style={{ display: "flex", flexDirection: "row" }}
         >
           <div class="img-placeholder">
-            <img src="https://images.unsplash.com/photo-1614130946015-d5a7a3276fea?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc5MTY4MTU&ixlib=rb-1.2.1&q=80" />
+            <img src={avatar} />
           </div>
           <div>
-            <h3>Wafaa</h3>
+            <h3>
+              {first_name} {last_name}
+            </h3>
             <p>
-              <i class="fa-solid fa-user"></i> Front End Web Developer
-            </p>
-            <p>
-              <i class="fa-solid fa-paper-plane"></i>{" "}
-              <a href="mailto:wafaa_cr@outlook.com">Email Me</a>
-            </p>
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Auckland, New Zealand
+              <i class="fa-solid fa-paper-plane"></i>
+              {email}
             </p>
           </div>
         </div>
@@ -29,5 +28,10 @@ const ProfileCard = () => {
     </>
   );
 };
-
-export default ProfileCard;
+ProfileCard.propTypes = {
+  singleUser: PropTypes.array.isRequired,
+};
+const mapStateToProps = (state) => ({
+  singleUser: state.singleUser,
+});
+export default connect(mapStateToProps)(ProfileCard);

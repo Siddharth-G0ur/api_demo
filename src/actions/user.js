@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getUser = () => async (dispatch) => {
   try {
-    const res = await axios.get("https://reqres.in/api/users?page=2");
+    const res = await axios.get("https://reqres.in/api/users");
     dispatch({
       type: GET_USER,
       payload: res.data.data,
