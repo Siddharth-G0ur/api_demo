@@ -10,7 +10,10 @@ const Cards = ({ first_name, last_name, id, getSingleUser }) => {
     const res = getSingleUser(id);
   };
   return (
-    <Button variant="primary" onClick={onClick}>
+    <Button
+      onClick={onClick}
+      style={{ background: "#dfd3c3", border: "5px solid #d0b8a8" }}
+    >
       {first_name} {last_name}
     </Button>
   );

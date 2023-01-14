@@ -1,28 +1,7 @@
 body {
   color: #1a1a1a;
   font-family: "Poppins", sans-serif;
-  background: hsla(141, 54%, 86%, 1);
-
-  background: linear-gradient(
-    to right,
-    hsla(141, 54%, 86%, 1) 0%,
-    hsla(333, 73%, 85%, 1) 50%,
-    hsla(211, 58%, 79%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    to right,
-    hsla(141, 54%, 86%, 1) 0%,
-    hsla(333, 73%, 85%, 1) 50%,
-    hsla(211, 58%, 79%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    to right,
-    hsla(141, 54%, 86%, 1) 0%,
-    hsla(333, 73%, 85%, 1) 50%,
-    hsla(211, 58%, 79%, 1) 100%
-  );
+  background: #f8ede3;
 }
 .flex-container {
   display: flex;
@@ -39,10 +18,11 @@ body {
   width: 50%;
 }
 .card {
-  border: 1px solid #eee;
+  border: 1px solid #d0b8a8;
+  border-width: 5px;
   border-radius: 15px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #dfd3c3;
   display: flex;
   column-gap: 20px;
   box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.5);
@@ -55,13 +35,12 @@ body {
 }
 .img-placeholder {
   position: relative;
-  max-height: 200px;
+  height: 119px;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.75);
+  border: 5px solid #d0b8a8;
 }
+
 h3 {
   font-weight: 400;
 }
